@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contato — IFMT Campus Campo Verde</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="logo.png" alt="IFMT" /></a>
+      <nav id="mainNav" class="main-nav" aria-label="Navegação principal">
+        <a href="index.html">Home</a>
+        <a href="about.html">Quem somos</a>
+        <a href="courses.html">Cursos</a>
+        <a href="news.html">Notícias</a>
+        <a class="active" href="contact.html">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Fale conosco</h1>
+    <p>Utilize o formulário abaixo. Este exemplo faz validação front-end e simula envio.</p>
+
+    <form id="contactForm" class="contact-form" novalidate>
+      <label for="name">Nome</label>
+      <input id="name" name="name" type="text" required minlength="2">
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required>
+
+      <label for="subject">Assunto</label>
+      <input id="subject" name="subject" type="text" required>
+
+      <label for="message">Mensagem</label>
+      <textarea id="message" name="message" rows="6" required minlength="5"></textarea>
+
+      <div class="form-actions">
+        <button class="btn primary" type="submit">Enviar</button>
+        <button class="btn" type="reset">Limpar</button>
+      </div>
+
+      <div id="formMsg" role="status" aria-live="polite"></div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><img src="logo.png" alt="IFMT" /></div>
+      <div><h4>Endereço</h4><p>Av. Isidoro Luiz Gentilin, 585</p></div>
+      <div><h4>Telefone</h4><p>(65) 98161-2068</p></div>
+    </div>
+    <div class="legal">© <span id="yearContact"></span> IFMT - Campus Campo Verde</div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    // validação e envio simulado
+    document.addEventListener('DOMContentLoaded', function(){
+      const form = document.getElementById('contactForm');
+      if(form){
+        form.addEventListener('submit', function(e){
+          e.preventDefault();
+          if(!form.checkValidity()){ form.reportValidity(); return; }
+          const status = document.getElementById('formMsg');
+          status.textContent = 'Enviando...';
+          setTimeout(()=>{ status.textContent = 'Mensagem enviada com sucesso. Responderemos em até 3 dias úteis.'; form.reset(); }, 900);
+        });
+      }
+    });
+  </script>
+</body>
+</html>

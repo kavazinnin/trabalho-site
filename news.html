@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Notícias — IFMT Campus Campo Verde</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="logo.png" alt="IFMT" /></a>
+      <nav id="mainNav" class="main-nav" aria-label="Navegação principal">
+        <a href="index.html">Home</a>
+        <a href="about.html">Quem somos</a>
+        <a href="courses.html">Cursos</a>
+        <a class="active" href="news.html">Notícias</a>
+        <a href="contact.html">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Notícias e Atualizações</h1>
+    <p>Últimas notícias do campus. Conteúdo carregado dinamicamente do arquivo <code>data/news.json</code>.</p>
+
+    <div id="newsList" class="grid news-grid" aria-live="polite"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><img src="logo.png" alt="IFMT" /></div>
+      <div><h4>Contato</h4><p>contato@cvd.ifmt.edu.br</p></div>
+    </div>
+    <div class="legal">© <span id="yearNews"></span> IFMT - Campus Campo Verde</div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    // adicional: pagina news pode forçar fetch imediato (main.js já faz)
+    // main.js irá preencher #newsList usando data/news.json
+  </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Laboratório Bridge — IFMT Campus Campo Verde</title>
+  <meta name="description" content="Laboratório Bridge adaptado para IFMT Campus Campo Verde — pesquisas, inovação, produtos e notícias."/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="logo.png" alt="IFMT - Campus Campo Verde" /></a>
+      <button id="navToggle" class="nav-toggle" aria-controls="mainNav" aria-expanded="false">☰</button>
+      <nav id="mainNav" class="main-nav" aria-label="Navegação principal">
+        <a href="index.html">Home</a>
+        <a href="about.html">Quem somos</a>
+        <a href="courses.html">Cursos</a>
+        <a href="news.html">Notícias</a>
+        <a href="contact.html">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Pesquisa e Inovação em Tecnologia — IFMT Campus Campo Verde</h1>
+          <p class="lead">Contribuímos com soluções tecnológicas para a comunidade regional — ensino, pesquisa, extensão e inovação.</p>
+          <p class="hero-actions">
+            <a class="btn primary" href="courses.html">Ver Cursos</a>
+            <a class="btn" href="news.html">Últimas Notícias</a>
+          </p>
+        </div>
+        <div class="hero-media">
+          <img src="campus.webp" alt="Campus IFMT Campo Verde — vista" />
+        </div>
+      </div>
+    </section>
+
+    <section class="container about-preview" aria-labelledby="about-title">
+      <h2 id="about-title">Um pouco sobre nós</h2>
+      <p>Somos o núcleo focado em pesquisa, desenvolvimento e inovação tecnológica. Aqui produzimos protótipos, pesquisas aplicadas e formamos talentos.</p>
+
+      <div class="grid cards">
+        <article class="card">
+          <h3>Portfólio</h3>
+          <p>Produtos e sistemas voltados para gestão pública e soluções locais.</p>
+          <p><a href="#" class="link">Conheça nossos produtos</a></p>
+        </article>
+
+        <article class="card">
+          <h3>Blog e Conteúdo</h3>
+          <p>Artigos, tutoriais e relatórios técnicos produzidos por alunos e servidores.</p>
+          <p><a href="#" class="link">Visite o blog</a></p>
+        </article>
+
+        <article class="card">
+          <h3>Trabalhe conosco</h3>
+          <p>Vagas, estágios e colaboracões para participar dos projetos.</p>
+          <p><a class="link" href="#">Ver oportunidades</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container highlights" aria-labelledby="news-title">
+      <h2 id="news-title">Notícias recentes</h2>
+      <div id="newsPreview" class="grid news-grid" aria-live="polite">
+        <!-- JS carrega notícias de data/news.json -->
+      </div>
+    </section>
+
+    <section class="container social" aria-labelledby="follow">
+      <h2 id="follow">Siga-nos</h2>
+      <p>Instagram · Facebook · LinkedIn · GitHub</p>
+      <div class="social-icons">
+        <img src="icons8-facebook-logo-50.png" alt="facebook" />
+        <img src="icons8-instagram-16.png" alt="rede social" />
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-about">
+        <img src="logo.png" alt="IFMT" class="footer-logo" />
+        <p>Av. Isidoro Luiz Gentilin, 585 — Belvedere, Campo Verde - MT</p>
+        <p>Email: <a href="mailto:contato@cvd.ifmt.edu.br">contato@cvd.ifmt.edu.br</a></p>
+      </div>
+      <div>
+        <h4>Links úteis</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">Quem somos</a></li>
+          <li><a href="courses.html">Cursos</a></li>
+          <li><a href="news.html">Notícias</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Acompanhe</h4>
+        <p>@ifmt_campoverde</p>
+      </div>
+    </div>
+    <div class="legal">© <span id="year"></span> IFMT - Campus Campo Verde • Todos os direitos reservados.</div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
